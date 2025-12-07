@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>빵 고르기</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div id="loader-overlay" class="loader-overlay">
+        <div class="donut-container">
+            <div class="donut-wrapper">
+                <div class="donut">
+                    <span class="sprinkle s1"></span>
+                    <span class="sprinkle s2"></span>
+                    <span class="sprinkle s3"></span>
+                    <span class="sprinkle s4"></span>
+                    <span class="sprinkle s5"></span>
+                    <span class="sprinkle s6"></span>
+                    <span class="sprinkle s7"></span>
+                    <span class="sprinkle s8"></span>
+                    <span class="sprinkle s9"></span>
+                    <span class="sprinkle s10"></span>
+                    <span class="sprinkle s11"></span>
+                    <span class="sprinkle s12"></span>
+                </div>
+            </div>
+            <div class="donut-shadow"></div>
+        </div>
+    </div>
+
+
+    <div id="app-content">
+        <input type="checkbox" id="hamburger-check">
+        <header>
+            <h1><a href="index.html">빵지순례</a></h1>
+            <label for="hamburger-check" class="hamburger-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </header>
+        <div class="overlay"></div>
+
+        <main class="game-container">
+            <!-- 시작 화면 -->
+            <section id="game-start" class="game-page active">
+                <h2>빵 취향 테스트</h2>
+                <p>당신에게 어울리는 운명의 빵은 무엇일까요?</p>
+                <a href="#q1" class="game-btn">시작하기</a>
+            </section>
+
+            <!-- 질문 1: 맛 선호 -->
+            <section id="q1" class="game-page">
+                <h2>어떤 맛을 선호하시나요?</h2>
+                <div class="options">
+                    <a href="#q-sweet-1" class="game-btn">달콤한 맛</a>
+                    <a href="#q-savory-1" class="game-btn">짭짤한 맛</a>
+                </div>
+            </section>
+
+            <!-- 질문 (달콤): 식감 선호 -->
+            <section id="q-sweet-1" class="game-page">
+                <h2>어떤 식감을 좋아하시나요?</h2>
+                <div class="options">
+                    <a href="#result-melonbread" class="game-btn">바삭하고 부드러운 식감</a>
+                    <a href="#result-donut" class="game-btn">부드럽고 촉촉한 식감</a>
+                </div>
+            </section>
+
+            <!-- 질문 (짭짤): 언제 드시나요? -->
+            <section id="q-savory-1" class="game-page">
+                <h2>주로 언제 드시나요?</h2>
+                <div class="options">
+                    <a href="#q-savory-2-meal" class="game-btn">식사 대용</a>
+                    <a href="#result-garlic" class="game-btn">간식으로</a>
+                </div>
+            </section>
+
+            <!-- 질문 (짭짤 - 식사): 식감 선호 -->
+            <section id="q-savory-2-meal" class="game-page">
+                <h2>어떤 식감을 선호하시나요?</h2>
+                <div class="options">
+                    <a href="#result-ciabatta" class="game-btn">담백하고 쫄깃한 식감</a>
+                    <a href="#result-saltbread" class="game-btn">짭짤하고 고소한 식감</a>
+                </div>
+            </section>
+
+            <!-- 결과: 메론빵 -->
+            <section id="result-melonbread" class="game-page">
+                <h2>당신의 운명의 빵은...<br>메론빵!</h2>
+                <img src="img/melon-hover.jpg" alt="메론빵" class="result-img">
+                <p>겉은 바삭하고 속은 부드러운 달콤함을 즐기는 당신에게 완벽한 빵입니다.</p>
+                <a href="#game-start" class="game-btn">다시하기</a>
+            </section>
+
+            <!-- 결과: 도넛 -->
+            <section id="result-donut" class="game-page">
+                <h2>당신의 운명의 빵은...<br>도넛!</h2>
+                <img src="img/donut-hover.jpg" alt="도넛" class="result-img">
+                <p>부드럽고 촉촉한 달콤함으로 일상에 행복을 더해줄 빵입니다.</p>
+                <a href="#game-start" class="game-btn">다시하기</a>
+            </section>
+
+            <!-- 결과: 마늘바게트 -->
+            <section id="result-garlic" class="game-page">
+                <h2>당신의 운명의 빵은...<br>마늘바게트!</h2>
+                <img src="img/mandong.jpg" alt="마늘바게트" class="result-img">
+                <p>알싸한 마늘 향과 바게트의 조화가 완벽한 중독성 있는 빵입니다.</p>
+                <a href="#game-start" class="game-btn">다시하기</a>
+            </section>
+
+            <!-- 결과: 치아바타 -->
+            <section id="result-ciabatta" class="game-page">
+
+                <h2>당신의 운명의 빵은...<br>치아바타!</h2>
+                <img src="img/anguk-hover.jpg" alt="치아바타" class="result-img">
+                <p>담백하면서도 쫄깃한 식감으로 다양한 요리와 잘 어울리는 빵입니다.</p>
+
+                <a href="#game-start" class="game-btn">다시하기</a>
+            </section>
+
+            <!-- 결과: 소금빵 -->
+            <section id="result-saltbread" class="game-page">
+                <h2>당신의 운명의 빵은...<br>소금빵!</h2>
+                <img src="img/jayeon-hover.jpg" alt="소금빵" class="result-img">
+                <p>짭짤하면서도 고소한 맛이 일품인, 겉바속촉 매력의 빵입니다.</p>
+                <a href="#game-start" class="game-btn">다시하기</a>
+            </section>
+        </main>
+
+
+        <nav class="side-nav">
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> 홈</a></li>
+                <li><a href="page1.html"><i class="fa-solid fa-bread-slice"></i> 빵지순례</a></li>
+                <li><a href="game.html"><i class="fa-solid fa-gamepad"></i> 빵 고르기</a></li>
+                <li><label for="hamburger-check"><i class="fa-solid fa-xmark"></i> 닫기</label></li>
+            </ul>
+        </nav>
+        <a href="#top" class="scroll-to-top-btn">TOP</a>
+    </div>
+
+</body>
+
+</html>
